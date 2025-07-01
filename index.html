@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Météo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-sky-50 p-8 font-sans">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded shadow text-center">
+      <h1 class="text-2xl font-bold mb-4">🌦️ Vérifiez la météo</h1>
+
+      <div class="flex gap-2 mb-4">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Entrez une ville"
+          class="flex-grow border p-2 rounded"
+        />
+        <button
+          id="weather-btn"
+          onclick="fetchData()"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Rechercher
+        </button>
+      </div>
+
+      <div
+        id="weather-result"
+        class="text-left p-4 bg-gray-50 rounded border text-sm"
+      >
+        Entrez une ville pour obtenir la météo.
+      </div>
+    </div>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
